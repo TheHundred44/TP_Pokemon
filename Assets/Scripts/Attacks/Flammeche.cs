@@ -7,6 +7,7 @@ public class Flammeche : Attacks
     public override void Start()
     {
         _pokemon = FindObjectOfType<Pokemon>();
+        _uiManager = FindAnyObjectByType<UIManager>();
 
         NameOfAttack2 = "Flammèche";
         TypeOfAttack2 = "Feu";

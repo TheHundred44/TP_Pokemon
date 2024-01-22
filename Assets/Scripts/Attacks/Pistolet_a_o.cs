@@ -7,6 +7,7 @@ public class Pistolet_a_o : Attacks
     public override void Start()
     {
         _pokemon = FindObjectOfType<Pokemon>();
+        _uiManager = FindAnyObjectByType<UIManager>();
 
         NameOfAttack2 = "Pistolet à O";
         TypeOfAttack2 = "Eau";

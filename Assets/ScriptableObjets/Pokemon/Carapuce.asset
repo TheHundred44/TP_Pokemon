@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592d475d6ea75c54399cdc221c1991c4, type: 3}
   m_Name: Carapuce
   m_EditorClassIdentifier: 
+  Sprite: {fileID: 21300000, guid: bda846906f305ae44a786915f56768f0, type: 3}
   Name: Carapuce
   PV: 100
   Attack: 60

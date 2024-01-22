@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class AttackCalcul : MonoBehaviour
 {
-    private Pokemon _pokemonTrainer1;
-    private Pokemon _pokemonTrainer2;
+    private Pokemon _pokemonPlayer;
+    private Pokemon _pokemonTrainer;
     private Attacks _attacks;
 
     private void Start()
     {
-        _pokemonTrainer1 = FindAnyObjectByType<Pokemon>(); 
-        _pokemonTrainer2 = FindAnyObjectByType<Pokemon>(); //à récup autrepart
+        _pokemonPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Pokemon>();
+        _pokemonTrainer = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Pokemon>();
         _attacks = FindAnyObjectByType<Attacks>();
     }
 
@@ -19,37 +19,37 @@ public class AttackCalcul : MonoBehaviour
     {
         if (_attacks.TypeOfAttack2 == "Feu")
         {
-            if(_pokemonTrainer2.Type == "Plante")
+            if(_pokemonTrainer.Type == "Plante")
             {
-                _pokemonTrainer1.Damage *= 2;
+                _pokemonPlayer.Damage *= 2;
             }
-            else if (_pokemonTrainer2.Type == "Eau")
+            else if (_pokemonTrainer.Type == "Eau")
             {
-                _pokemonTrainer1.Damage /= 2;
-            }
-        }
-
-        if (_attacks.TypeOfAttack2 == "Eau")
-        {
-            if (_pokemonTrainer2.Type == "Plante")
-            {
-                _pokemonTrainer1.Damage /= 2;
-            }
-            else if (_pokemonTrainer2.Type == "Feu")
-            {
-                _pokemonTrainer1.Damage *= 2;
+                _pokemonPlayer.Damage /= 2;
             }
         }
 
-        if (_attacks.TypeOfAttack2 == "Plante")
+        else if (_attacks.TypeOfAttack2 == "Eau")
         {
-            if (_pokemonTrainer2.Type == "Eau")
+            if (_pokemonTrainer.Type == "Plante")
             {
-                _pokemonTrainer1.Damage *= 2;
+                _pokemonPlayer.Damage /= 2;
             }
-            else if (_pokemonTrainer2.Type == "Feu")
+            else if (_pokemonTrainer.Type == "Feu")
             {
-                _pokemonTrainer1.Damage /= 2;
+                _pokemonPlayer.Damage *= 2;
+            }
+        }
+
+        else
+        {
+            if (_pokemonTrainer.Type == "Eau")
+            {
+                _pokemonPlayer.Damage *= 2;
+            }
+            else if (_pokemonTrainer.Type == "Feu")
+            {
+                _pokemonPlayer.Damage /= 2;
             }
         }
 

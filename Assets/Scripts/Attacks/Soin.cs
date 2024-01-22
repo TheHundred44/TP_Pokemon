@@ -7,6 +7,7 @@ public class Soin : Attacks
     public override void Start()
     {
         _pokemon = FindObjectOfType<Pokemon>();
+        _uiManager = FindAnyObjectByType<UIManager>();
 
         NameOfAttack2 = "Soin";
         TypeOfAttack2 = "Plante";

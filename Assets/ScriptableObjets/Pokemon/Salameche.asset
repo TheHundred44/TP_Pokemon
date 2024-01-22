@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592d475d6ea75c54399cdc221c1991c4, type: 3}
   m_Name: Salameche
   m_EditorClassIdentifier: 
-  Name: "Salam\xE8che"
+  Sprite: {fileID: 21300000, guid: 8e1a116ba2e009c4ab34dbb9d0b9bc4c, type: 3}
+  Name: Salameche
   PV: 100
   Attack: 60
   Defence: 40
