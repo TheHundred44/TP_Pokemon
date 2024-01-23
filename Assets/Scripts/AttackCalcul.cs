@@ -10,8 +10,8 @@ public class AttackCalcul : MonoBehaviour
 
     private void Start()
     {
-        _pokemonPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Pokemon>();
-        _pokemonTrainer = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Pokemon>();
+        _pokemonPlayer = GameObject.FindGameObjectWithTag("PokemonPlayer").GetComponent<Pokemon>();
+        _pokemonTrainer = GameObject.FindGameObjectWithTag("PokemonTrainer").GetComponent<Pokemon>();
         _attacks = FindAnyObjectByType<Attacks>();
     }
 

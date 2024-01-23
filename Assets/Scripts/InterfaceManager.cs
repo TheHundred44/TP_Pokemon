@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class InterfaceManager : MonoBehaviour
 {
-    public GameObject GameObjectInterfaceToOpen;
-    public GameObject GameObjectInterfaceToClose;
 
-    public void OpenInterface()
+    public void OpenInterface(GameObject GameObjectInterfaceToOpen)
     {
         GameObjectInterfaceToOpen.SetActive(true);
-        GameObjectInterfaceToClose.SetActive(false);
     }
 
-    public void CloseInterface()
+    public void CloseInterface(GameObject GameObjectInterfaceToClose)
     {
-        GameObjectInterfaceToClose.SetActive(true);
-        GameObjectInterfaceToOpen.SetActive(false);
+        GameObjectInterfaceToClose.SetActive(false);
     }
 }

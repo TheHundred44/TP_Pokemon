@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
+  - PokemonPlayer
+  - PokemonTrainer
+  - Trainer
   layers:
   - Default
   - TransparentFX

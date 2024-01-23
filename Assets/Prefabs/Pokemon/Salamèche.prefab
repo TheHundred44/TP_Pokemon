@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 810033540174315378}
   m_Layer: 0
   m_Name: "Salam\xE8che"
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PokemonScriptable: {fileID: 11400000, guid: 287198e474c1508479107447d72df720, type: 2}
+  Sprite: {fileID: 0}
   Name: 
   PV: 0
   Attack: 0

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ebecb30d94515458c5df738caf138c, type: 3}
   m_Name: Pierre
   m_EditorClassIdentifier: 
-  NameTrainer: 
+  NameTrainer: Pierre
+  ListPokemon: []
+  NbPokemon: 0

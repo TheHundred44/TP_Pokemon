@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Pistolet_a_o : Attacks
@@ -8,14 +10,21 @@ public class Pistolet_a_o : Attacks
     {
         _pokemon = FindObjectOfType<Pokemon>();
         _uiManager = FindAnyObjectByType<UIManager>();
+        _nameOfAttack2 = GameObject.Find("Attack2Text").GetComponent<TMP_Text>();
 
-        NameOfAttack2 = "Pistolet à O";
+        NameOfAttack2 = "PISTOLET A EAU";
         TypeOfAttack2 = "Eau";
+        if(_pokemon.tag.Equals("Player"))
+        {
+            _nameOfAttack2.text = NameOfAttack2;
+        }
     }
 
     public override void SignatureAttack()
     {
+        Debug.Log("oui");
         _pokemon.Damage = (_pokemon.Attack * 90) / 100;
+        UseAttackPlayer(_pokemon.Damage);
     }
 }
 

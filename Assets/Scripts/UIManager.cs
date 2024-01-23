@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        _pokemonPlayerGameObject = GameObject.FindGameObjectWithTag("Player");
+        _pokemonPlayerGameObject = GameObject.FindGameObjectWithTag("PokemonPlayer");
         _pokemonPlayer = _pokemonPlayerGameObject.GetComponent<Pokemon>();
 
         _namePokemonPlayer.text = _pokemonPlayer.Name;
@@ -40,7 +40,7 @@ public class UIManager : MonoBehaviour
         _hPPokemonPlayerSlider.value= _pokemonPlayer.PVMax;
         _spritePokemonPlayer.sprite = _pokemonPlayer.Sprite;
 
-        _pokemonTrainerGameObject = GameObject.FindGameObjectWithTag("Enemy");
+        _pokemonTrainerGameObject = GameObject.FindGameObjectWithTag("PokemonTrainer");
         _pokemonTrainer = _pokemonTrainerGameObject.GetComponent<Pokemon>();
 
         _namePokemonTrainer.text = _pokemonTrainer.Name;
