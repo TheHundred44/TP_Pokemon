@@ -14,10 +14,10 @@ public class Humain : MonoBehaviour
 
     private void Awake()
     {
-        NameTrainer = humainScriptable.NameTrainer;
+        /*NameTrainer = humainScriptable.NameTrainer;
         ListPokemon = humainScriptable.ListPokemon;
         NBPokemonWanted = humainScriptable.NbPokemon;
-        Sprite = humainScriptable.SpriteHuman;
+        Sprite = humainScriptable.SpriteHuman;*/
 
         AttributionPokemon();
     }

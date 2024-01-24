@@ -7,12 +7,17 @@ public class GameManager : MonoBehaviour
 {
     public List<GameObject> ListHuman;
     public GameObject Player;
+    private Humain _humainPlayer;
+
     public GameObject Trainer;
     public int NBTrainer;
+    private Humain _humainTrainer;
+    private Image _spritePlayer;
 
     public List<Sprite> ListSpritesTerrain;
     public Image SpriteTerrain;
     public int NBTerrain;
+    private Image _spriteTrainer;
 
     public void Awake()
     {
@@ -25,12 +30,33 @@ public class GameManager : MonoBehaviour
         {
             
             GameObject _humainAleatoire = HumanRandom();
-            Player = _humainAleatoire;
-            Debug.Log(_humainAleatoire);
-            Debug.Log(Player);
+            Humain _playerRandom = _humainAleatoire.GetComponent<Humain>();
+
+            _spritePlayer = Player.GetComponent<Image>();
+
+            _humainPlayer = Player.GetComponent<Humain>();
+            _humainPlayer.humainScriptable = _playerRandom.humainScriptable;
+            _humainPlayer.NameTrainer = _playerRandom.humainScriptable.NameTrainer;
+            _humainPlayer.ListPokemon = _playerRandom.humainScriptable.ListPokemon;
+            _humainPlayer.NBPokemonWanted = _playerRandom.NBPokemonWanted;
+            _humainPlayer.TeamPokemon = _playerRandom.TeamPokemon;
+            _humainPlayer.Sprite = _playerRandom.humainScriptable.SpriteHuman;
+            _spritePlayer.sprite = _humainPlayer.Sprite;
+
 
             GameObject _humainAleatoire2 = HumanRandom();
-            Trainer = _humainAleatoire2;
+            Humain _trainerRandom = _humainAleatoire2.GetComponent<Humain>();
+
+            _spriteTrainer = Trainer.GetComponent<Image>();
+
+            _humainTrainer = Trainer.GetComponent<Humain>();
+            _humainTrainer.humainScriptable = _trainerRandom.humainScriptable;
+            _humainTrainer.NameTrainer = _trainerRandom.humainScriptable.NameTrainer;
+            _humainTrainer.ListPokemon = _trainerRandom.humainScriptable.ListPokemon;
+            _humainTrainer.NBPokemonWanted = _trainerRandom.NBPokemonWanted;
+            _humainTrainer.TeamPokemon = _trainerRandom.TeamPokemon;
+            _humainTrainer.Sprite = _trainerRandom.humainScriptable.SpriteHuman;
+            _spriteTrainer.sprite = _humainTrainer.Sprite;
 
         }
         else
