@@ -4,29 +4,27 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
-    public GameObject PokeballTrainer;
-    public GameObject PokeballPlayer;
-    public GameObject Player;
-    public GameObject Trainer;
+    public GameObject NextAnimationObject;
+    
 
-    public void PlayAnimation2()
+    public void PlayAnimationPokeballPlayer()
     {
-        PokeballPlayer.GetComponent<Animation>().Play("PokeballPlayer");
+        NextAnimationObject.GetComponent<Animation>().Play("PokeballPlayer");
     }
 
-    public void PlayAnimation3()
+    public void PlayAnimationPokemonPlayer()
     {
-        Player.GetComponent<Animation>().Play("PokemonPlayer");
+        NextAnimationObject.GetComponent<Animation>().Play("PokemonPlayer");
     }
 
-    public void PlayAnimation4()
+    public void PlayAnimationPokeballTrainer()
     {
-        Trainer.GetComponent<Animation>().Play("PokeballTrainer");
+        NextAnimationObject.GetComponent<Animation>().Play("PokeballTrainer");
     }
 
-    public void PlayAnimation5()
+    public void PlayAnimationPokemonTrainer()
     {
-        PokeballTrainer.GetComponent<Animation>().Play("PokeballTrainer");
+        NextAnimationObject.GetComponent<Animation>().Play("PokeballTrainer");
     }
 
 }

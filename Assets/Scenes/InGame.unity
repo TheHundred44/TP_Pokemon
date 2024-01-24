@@ -844,13 +844,14 @@ GameObject:
   - component: {fileID: 209669173}
   - component: {fileID: 209669172}
   - component: {fileID: 209669174}
+  - component: {fileID: 209669175}
   m_Layer: 5
   m_Name: PokeballPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &209669171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -929,6 +930,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &209669175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209669170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b98cee6f94d20468ecfc1ab8f7462e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextAnimationObject: {fileID: 50636567}
 --- !u!1 &211946988
 GameObject:
   m_ObjectHideFlags: 0
@@ -3548,13 +3562,14 @@ GameObject:
   - component: {fileID: 733112957}
   - component: {fileID: 733112956}
   - component: {fileID: 733112955}
+  - component: {fileID: 733112958}
   m_Layer: 5
   m_Name: PokeballTrainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &733112954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3633,6 +3648,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733112953}
   m_CullTransparentMesh: 1
+--- !u!114 &733112958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733112953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b98cee6f94d20468ecfc1ab8f7462e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextAnimationObject: {fileID: 50636567}
 --- !u!1 &739927966
 GameObject:
   m_ObjectHideFlags: 0
@@ -4347,6 +4375,7 @@ GameObject:
   - component: {fileID: 1071100157}
   - component: {fileID: 1071100159}
   - component: {fileID: 1071100158}
+  - component: {fileID: 1071100161}
   - component: {fileID: 1071100160}
   m_Layer: 0
   m_Name: Trainer
@@ -4451,6 +4480,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1071100161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071100155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b98cee6f94d20468ecfc1ab8f7462e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextAnimationObject: {fileID: 733112953}
 --- !u!1 &1082519247
 GameObject:
   m_ObjectHideFlags: 0
@@ -4480,10 +4522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b98cee6f94d20468ecfc1ab8f7462e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PokeballTrainer: {fileID: 733112953}
-  PokeballPlayer: {fileID: 209669170}
-  Player: {fileID: 1478669559}
-  Trainer: {fileID: 1071100155}
+  NextAnimationObject: {fileID: 0}
 --- !u!4 &1082519249
 Transform:
   m_ObjectHideFlags: 0
@@ -5813,6 +5852,7 @@ GameObject:
   - component: {fileID: 1478669561}
   - component: {fileID: 1478669563}
   - component: {fileID: 1478669562}
+  - component: {fileID: 1478669565}
   - component: {fileID: 1478669564}
   m_Layer: 0
   m_Name: Player
@@ -5917,6 +5957,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1478669565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478669559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b98cee6f94d20468ecfc1ab8f7462e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextAnimationObject: {fileID: 209669170}
 --- !u!1 &1494115844
 GameObject:
   m_ObjectHideFlags: 0
