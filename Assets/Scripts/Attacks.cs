@@ -21,23 +21,36 @@ public class Attacks : MonoBehaviour
     Pokemon _pokemonPlayer;
     Pokemon _pokemonTrainer;
 
+    BattleManager _battleManager;
+
     public virtual void Start()
     {
-        _pokemon = FindObjectOfType<Pokemon>();
         _uiManager = FindAnyObjectByType<UIManager>();
         _nameOfAttack2 = GameObject.Find("Attack2Text").GetComponent<TMP_Text>();
 
         _pokemonPlayer = GameObject.FindGameObjectWithTag("PokemonPlayer").GetComponent<Pokemon>();
         _pokemonTrainer = GameObject.FindGameObjectWithTag("PokemonTrainer").GetComponent<Pokemon>();
 
+        _battleManager= FindAnyObjectByType<BattleManager>();
+
 
     }
 
-    public void Charge()
+    public void ChargePlayer()
     {
-        _pokemon.Damage = (_pokemon.Attack * 20) / 100;
-        UseAttackPlayer(_pokemon.Damage);
+        Charge(_battleManager.PlayerPokemonGameObject);
+    }
 
+    public void Charge(GameObject _pokemonWhoAttack)
+    {
+        if(_pokemonWhoAttack.tag == "PokemonPlayer")
+        {
+            _pokemonPlayer.Damage = (_pokemonPlayer.Attack * 20) / 100;
+        }
+        else
+        {
+            _pokemonTrainer.Damage = (_pokemonTrainer.Attack * 20) / 100;
+        }
     }
 
     public virtual void SignatureAttack()

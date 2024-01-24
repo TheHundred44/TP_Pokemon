@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameTrainer: Ondine
   ListPokemon:
-  - {fileID: 5718925295071492982, guid: a4e92f83e625e55428745c9193c6f922, type: 3}
-  - {fileID: 782087689582231307, guid: 3a1f2445e1726204c8e66abf8eebc2fb, type: 3}
-  - {fileID: 3479246444656664217, guid: a733b2c3722f93843ac31fd5732bd94f, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   NbPokemon: 2
   SpriteHuman: {fileID: 21300000, guid: f2a4ea30b59820840831da99f7ca8547, type: 3}

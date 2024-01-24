@@ -13,7 +13,8 @@ public class Flammeche : Attacks
 
         NameOfAttack2 = "FLAMMECHE";
         TypeOfAttack2 = "Feu";
-        if (_pokemon.tag.Equals("Player"))
+
+        if (_pokemon.tag.Equals("PokemonPlayer"))
         {
             _nameOfAttack2.text = NameOfAttack2;
         }

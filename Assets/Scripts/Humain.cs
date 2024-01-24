@@ -12,7 +12,7 @@ public class Humain : MonoBehaviour
     public List<Pokemon> TeamPokemon;
     public Sprite Sprite;
 
-    private void Awake()
+    private void Start()
     {
         /*NameTrainer = humainScriptable.NameTrainer;
         ListPokemon = humainScriptable.ListPokemon;
@@ -41,6 +41,11 @@ public class Humain : MonoBehaviour
         else
         {
             Debug.LogError("La liste des Pokémon disponibles est insuffisante.");
+        }
+
+        if (this.tag == "Player")
+        {
+            TeamPokemon[0].tag = "PokemonPlayer";
         }
     }
 

@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: Pierre
   m_EditorClassIdentifier: 
   NameTrainer: Pierre
-  ListPokemon: []
+  ListPokemon:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   NbPokemon: 0
+  SpriteHuman: {fileID: 0}

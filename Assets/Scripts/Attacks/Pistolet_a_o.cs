@@ -14,7 +14,8 @@ public class Pistolet_a_o : Attacks
 
         NameOfAttack2 = "PISTOLET A EAU";
         TypeOfAttack2 = "Eau";
-        if(_pokemon.tag.Equals("Player"))
+
+        if(_pokemon.tag.Equals("PokemonPlayer"))
         {
             _nameOfAttack2.text = NameOfAttack2;
         }
@@ -24,7 +25,6 @@ public class Pistolet_a_o : Attacks
     {
         Debug.Log("oui");
         _pokemon.Damage = (_pokemon.Attack * 90) / 100;
-        UseAttackPlayer(_pokemon.Damage);
     }
 }
 

@@ -90,6 +90,4 @@ public class GameManager : MonoBehaviour
     {
         return ListSpritesTerrain[Random.Range(0, ListSpritesTerrain.Count)];
     }
-
-
 }

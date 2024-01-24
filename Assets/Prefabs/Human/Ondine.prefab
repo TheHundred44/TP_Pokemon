@@ -49,3 +49,4 @@ MonoBehaviour:
   ListPokemon: []
   NBPokemonWanted: 0
   TeamPokemon: []
+  Sprite: {fileID: 0}
