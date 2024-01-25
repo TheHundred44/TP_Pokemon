@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Threading.Tasks;
 
 public class BattleManager : MonoBehaviour
 {
@@ -33,15 +32,16 @@ public class BattleManager : MonoBehaviour
 
     }
 
-    public void BattleStart()
+    public async void BattleStart()
     {
         if(_pokemonPlayer.Speed > _pokemonTrainer.Speed)
         {
             _attacks.UseAttackPlayer(_pokemonPlayer.Damage);
-            _canContinued = VerificationLife(_pokemonTrainer.PV, _humainTrainer);
-
-            _attacks.UseAttackPlayer(_pokemonPlayer.Damage);
             VerificationLife(_pokemonTrainer.PV, _humainTrainer);
+
+            await Task.Delay(1000); 
+
+            if (_canContinued)
             {
                 ChoiceAttackIA();
                 _attacks.UseAttackTrainer(_pokemonTrainer.Damage);
@@ -54,6 +54,8 @@ public class BattleManager : MonoBehaviour
             ChoiceAttackIA();
             _attacks.UseAttackTrainer(_pokemonTrainer.Damage);
             _canContinued = VerificationLife(_pokemonPlayer.PV, _humainPlayer);
+
+            await Task.Delay(1000);
 
             if (_canContinued)
             {
@@ -70,6 +72,8 @@ public class BattleManager : MonoBehaviour
             {
                 _attacks.UseAttackPlayer(_pokemonPlayer.Damage);
                 _canContinued = VerificationLife(_pokemonTrainer.PV, _humainTrainer);
+                
+                await Task.Delay(1000);
 
                 if (_canContinued)
                 {
@@ -84,6 +88,8 @@ public class BattleManager : MonoBehaviour
                 ChoiceAttackIA();
                 _attacks.UseAttackTrainer(_pokemonTrainer.Damage);
                 _canContinued = VerificationLife(_pokemonPlayer.PV, _humainTrainer);
+
+                await Task.Delay(1000);
 
                 if (_canContinued)
                 {
